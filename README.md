@@ -1,5 +1,5 @@
-# MaxLinux
-以Linux为内核的MaxDOS替代品
+# PELinux
+以Linux为内核的系统维护工具。
 
 ## 特性
 1. 相比于DOS，支持UEFI启动。
