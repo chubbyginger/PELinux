@@ -16,4 +16,4 @@
 
    这是将来打算使用的方法。该种方法可定制性超强，最小的系统可以做到磁盘占用8MB以内还能运行Apache服务器。
 
-   [Linux From Scratch](linuxfromscratch.org)是一个很好的主意。
+   [Linux From Scratch](https://linuxfromscratch.org)是一个很好的主意。
