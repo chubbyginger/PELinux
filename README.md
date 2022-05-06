@@ -6,7 +6,7 @@
 
 比如说，当电脑的分区表产生了损坏的时候，Windows是无法启动的。在这种情况下，就需要Linux的帮助来修复问题。
 
-PELinux是一个基于Linux的维护系统，内置有fdisk、gdisk等Unix下著名的分区工具和各种其他工具，可以修复很多电脑问题。
+PELinux是一个基于Linux的维护系统，内置有fdisk、gdisk等Unix下著名的分区工具和各种其他工具，可以修复很多电脑问题。可以在legacy固件和EFI固件下工作。
 
 ## 构建方法
 目前的构建方法是Linux From Scratch 11。这种方法构架出的系统体积极小，最小的系统只有8MB，还可以运行Apache服务器。
@@ -16,16 +16,17 @@ PELinux是一个基于Linux的维护系统，内置有fdisk、gdisk等Unix下著
 * 准备源代码
 * 构建LFS工具链和临时编译器
 * 进入 chroot 编译更多临时工具
-* -> 安装系统软件
+* 安装系统软件
 * 系统配置
 * 配置引导
-* 结束
+* LFS 配置结束
+* -> 在BLFS中安装其他软件
 
 ## 关于 LFS 的备注
 1. 在构建工具链的时候，编译GCC-11.2.0时，务必**先提前编译gmp、mpfr、mpc三个包，然后在configure时加入三个包的路径**（以第一次为例）：
 ```bash
 ../configure \
-...（LFS书里面说的configure代码） \
+... \
 --with-gmp=/path/to/gmp \
 --with-mpfr=/path/to/mpfr \
 --with-mpc=/path/to/mpc
